@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@plugin "daisyui"{
+    themes: light --default;
+}
+
+.myText {
+    @apply text-[#706F6F]
+}
+
+.links {
+    @apply flex items-center gap-5 font-medium
+}
