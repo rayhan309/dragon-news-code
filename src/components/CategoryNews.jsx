@@ -21,15 +21,14 @@ const CategoryNews = () => {
             setCategoryNews(newsData)
         }
         else{
-             const filteredNews = newsData.filter(news => news?.category_id == id);
-             console.log(filteredNews)
+             const filteredNews = newsData.filter(news => news?.category_id == id); 
             setCategoryNews(filteredNews);
         }
     }, [id, newsData]);
 
     return (
         <div>
-            <h3>Dragon News ({categoryNews.length}) Founds</h3>
+            <h3 className='text-xl font-semibold'>Totale News <span className='text-[#D72050]'>{categoryNews.length}</span> Fuonds</h3>
 
             <div>
                 {

@@ -21,7 +21,7 @@ const Navber = () => {
                 <NavLink to='/career'>Career</NavLink>
             </div>
             <div className='flex items-center gap-4'>
-                <img src={usericon} alt="user" />
+                <img className='w-12 rounded-full' src={user ? user?.photoURL ? user?.photoURL : usericon : usericon} alt="user" />
                 {
                     user ? <button onClick={logoutHandle} className='btn bg-[#403F3F] text-white font-semibold px-8'>LogOut</button> : <Link to='/auth/login' className='btn bg-[#403F3F] text-white font-semibold px-8'>Login</Link>
                 }

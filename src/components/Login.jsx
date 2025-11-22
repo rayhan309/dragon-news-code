@@ -1,10 +1,16 @@
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { use } from "react";
 import { AuthContext } from "../Provider/AuthContex";
 import { toast } from "react-toastify";
 
 const Login = () => {
+
   const { loginUser } = use(AuthContext);
+  const location = useLocation()
+
+  const navigate = useNavigate()
+  // console.log(location)
+
 
   // login handle
   const loginHandle = (e) => {
@@ -21,6 +27,7 @@ const Login = () => {
       const user = result?.user;
       console.log(user)
       toast.success("Login Successfully")
+      navigate(location?.state ? location?.state : '/')
     })
     .catch(error=> {
       toast.error(error?.message)
