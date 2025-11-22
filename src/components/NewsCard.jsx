@@ -73,15 +73,7 @@ const NewsCard = ({ news }) => {
             {Array.from({ length: rating.number }).map((_, idx) => (
               <FaStar
                  key={idx}
-              />
-
-              // <FaRegBookmark
-              //   key={idx}
-              //   type="radio"
-              //   className="mask mask-star-2 text-orange-700"
-              //   readOnly
-              // />
-
+              /> 
             ))}
           </div>
           <span className="font-semibold">{rating.number}</span>

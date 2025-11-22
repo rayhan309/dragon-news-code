@@ -1,15 +1,9 @@
 import { Suspense } from "react";
 import Categories from "./categories";
-import FackNews from "./FackNews";
-import { useLocation, useNavigate } from "react-router";
+import FackNews from "./FackNews"; 
 
 const Left_side = () => {
-
-  const location = useLocation()
-  console.log(location)
-  const naviget = useNavigate()
-  console.log(naviget)
-
+ 
   return (
     <aside>
       <Suspense

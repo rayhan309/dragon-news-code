@@ -1,10 +1,9 @@
-// import { Navigate } from "react-router";
+import { Navigate } from "react-router";
 
+ 
 const Home = () => {
-
-
-    
-    // return <Navigate to='-1' ></Navigate>
+     
+    return <Navigate to='/category/0'></Navigate>
 };
 
 export default Home;
